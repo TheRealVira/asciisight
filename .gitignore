@@ -1,3 +1,5 @@
 *.stl
 *.txt
 __pycache__/
+
+!requirements.txt
