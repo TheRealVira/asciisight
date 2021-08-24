@@ -40,28 +40,16 @@ if __name__ == "__main__":
         print("\033[H\033[J", end="")
         
         # Recalculate position
-        (x, y, z) = fig.camera.GetPosition()
         if currentkey in "Aa":
-            theta += 10
+            fig.camera.Yaw(10)
         elif currentkey in "Dd":
-            theta-=10
+            fig.camera.Yaw(-10)
         if currentkey in "Ww":
-            phi+=10
+            fig.camera.Pitch(10)
         elif currentkey in "Ss":
-            phi-=10
+            fig.camera.Pitch(-10)
         
-        r = 10
-        theta%=180
-        phi%=360
-        radtheta = math.radians(theta)
-        radphi = math.radians(phi)
-        x = 0 + r * math.sin(radtheta) * math.cos(radphi)
-        y = 0 + r * math.sin(radtheta) * math.sin(radphi)
-        z = 0 + r * math.cos(radtheta)
-        
-        # Set new position
-        fig.camera.SetPosition(x, y, z)
-        vtkplotlib.reset_camera()
+        fig.reset_camera()
         
         # Render new image
         img = Image.fromarray(vtkplotlib.screenshot_fig(magnification=1, pixels=(size,size), trim_pad_width=1, off_screen=True, fig=fig))
