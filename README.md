@@ -1,4 +1,4 @@
-![asciisight](asciisight.png)
+![asciisight](content/asciisight.png)
 
 3D plotting your STL files into 2D ASCII 🎨
 
@@ -7,7 +7,7 @@
 > python asciisight.py ks.stl
 ```
 
-![example](example.png)
+![example](content/example.png)
 
 ## Installation
 
