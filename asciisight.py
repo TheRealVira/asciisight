@@ -9,8 +9,6 @@ colorRamp = " .'`^\",:;Il!i><~+_-?][}{1)(|\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8
 colorRampLength = len(colorRamp)
 
 currentkey = " "
-theta = 0
-phi = 0
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
